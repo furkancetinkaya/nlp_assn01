@@ -13,22 +13,6 @@ def ReadSample(samplename):
         readtext = fd.read()
     return readtext
 
-def RemovePunctuation(data):
-    removedPunc = [c for c in data if c not in string.punctuation]
-    return removedPunc
-
-def RemoveStopwords(source):
-    stop_words = sw
-    stp = list(stop_words)
-    stp.append("'s")
-    stp.append("'ve")
-    stp.append("``")
-    removedStp = []
-    for w in source:
-        if w not in stp:
-            removedStp.append(w)
-    return removedStp
-
 def PrepareText(source):
     removedPunc = [c for c in source if c not in string.punctuation]
     stop_words = sw
