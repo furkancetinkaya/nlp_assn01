@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.util import ngrams
 from collections import Counter
 sw = stopwords.words('english')
+nltk.download('averaged_perceptron_tagger')
 
 def ReadSample(samplename):
     with open (samplename, "r") as fd:
@@ -83,13 +84,14 @@ def GetFreqWithTriGram(source):
 def GetPOSTagNumber(source):
     tags = nltk.pos_tag(source)
     num = Counter(t for word, t in tags)
-    print(num)
+    print(num, end="\n\n")
     return True
 
 def Main(input):
     SampleText = ReadSample(input)
     TokenizedText = nltk.word_tokenize(SampleText)
     PreparedText = PrepareText(TokenizedText)
+    GetPOSTagNumber(PreparedText)
     GetFreqWithUniGram(PreparedText)
     GetFreqWithBiGram(PreparedText)
     GetFreqWithTriGram(PreparedText)
