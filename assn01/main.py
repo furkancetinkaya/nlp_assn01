@@ -7,8 +7,8 @@
 import os
 import nltk
 import string
-#nltk.download('punkt')      # NLTK Tokenizer
-#nltk.download('wordnet')    # WordNet Lemmatizer
+nltk.download('punkt',download_dir="./env/nltk_data/")
+nltk.download('wordnet',download_dir="./env/nltk_data/")
 
 from nltk.tokenize import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer

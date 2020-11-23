@@ -3,8 +3,9 @@
 ## Import Libraries
 from __future__ import unicode_literals     # For Unicode characters
 import nltk
-#nltk.download("punkt")
-#from collections import Counter
+nltk.download("punkt", download_dir="./env/nltk_data/")
+nltk.download("stopwords", download_dir="./env/nltk_data/")
+from collections import Counter
 from nltk import word_tokenize              # For tokenizing
 from nltk.util import ngrams                # For ngrams
 from nltk.corpus import stopwords           # For removing stopwords
@@ -13,7 +14,7 @@ sw = stopwords.words('turkish')
 
 ## Library
 def ReadSampleTextFromFile():
-    with open("sample.txt", "r") as fd:
+    with open("sample.txt", "r", encoding="utf-8") as fd:
         readText = fd.read()
     return readText
 

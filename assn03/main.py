@@ -1,6 +1,8 @@
 import os
 import string
 import nltk
+nltk.download('stopwords', download_dir="./env/nltk_data/")
+nltk.download('punkt', download_dir="./env/nltk_data/")
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.util import ngrams
