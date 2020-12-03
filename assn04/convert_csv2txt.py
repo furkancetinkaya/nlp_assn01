@@ -26,4 +26,8 @@ with open(corpus_text, "w") as ofd:
                 ofd.write(row[1])
             i = i + 1
 
+import os
+os.remove("texts.csv")
+os.remove("corpus.csv")
+
 print("Done!")
