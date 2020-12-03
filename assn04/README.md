@@ -10,4 +10,4 @@ POS Taggers used\
 https://pypi.org/project/zeyrek \
 https://pypi.org/project/trnlp
 
-PS: I started using Pycharm IDE until now =)
+PS: I started using Pycharm IDE from now =)
