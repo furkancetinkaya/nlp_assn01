@@ -2,14 +2,14 @@ import nltk
 import zeyrek
 from nltk.corpus import stopwords
 from nltk.util import ngrams
-from trnlp import TrnlpWord, word_to_number
+from trnlp import TrnlpWord, word_to_number, number_to_word
 
 sw = stopwords.words('turkish')
 
 def ReadCorpusFromFile():
     """ This function reads the first 2000 lines of the corpus from file 'corpus.csv' """
     ReadText = ""
-    with open("corpus.csv", "r", encoding="utf-8") as fd:
+    with open("corpus.txt", "r", encoding="utf-8") as fd:
         for i, line in enumerate(fd):
             if(i < 2000):
                 ReadText = ReadText + " " + line
@@ -49,6 +49,7 @@ def Main():
     ReadCorpus = ReadCorpusFromFile()
     PreparedText = PrepareCorpus(ReadCorpus)
     Variable = GetFreqWithUniGram(PreparedText)
+
 
     vars = []
     for var in Variable:

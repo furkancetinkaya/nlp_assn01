@@ -9,5 +9,5 @@ pip install -r requirements.txt
 # Then download required packages
 python reqs.py
 
-# Print success message
-echo "If there is no error, the environment setup is done :)"
+# Download the corpus, and convert it to txt
+python convert_csv2txt.py
