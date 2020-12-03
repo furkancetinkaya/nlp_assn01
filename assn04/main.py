@@ -2,7 +2,7 @@ import nltk
 import zeyrek
 from nltk.corpus import stopwords
 from nltk.util import ngrams
-from trnlp import TrnlpWord, word_to_number, number_to_word
+from trnlp import TrnlpWord
 
 sw = stopwords.words('turkish')
 
@@ -57,17 +57,16 @@ def Main():
         length = len(data)
         vars.append(data[2:(length-3)])
 
-    print("\n----------------------- TRNLP TAGGER -----------------------\n")
+
+    print("TAGGER |    WORD    |   LEMMA    |  POS\n-------+------------+------------+------------")
+    analyzer = zeyrek.MorphAnalyzer()
     for word in vars:
         tok = TrnlpWord()
         tok.setword(word)
-        print("Word: %8s  --> " % (word), "Lemma: %8s  --> " % (tok.get_base), "POS: ", tok.get_base_type)
-    
-    print("\n----------------------- ZEYREK TAGGER -----------------------\n")
-    analyzer = zeyrek.MorphAnalyzer()
-    for word in vars:
+        print(" TRNLP |  %8s  |  %8s  | " % (word, tok.get_base), tok.get_base_type )
         tmp = analyzer.analyze(word)[0][0]
-        print("Word: %8s  --> " % (tmp[0]), "Lemma: %8s  --> " % (tmp[1]), "POS: ", tmp[2])
+        print("ZEYREK |  %8s  |  %8s  | " % (tmp[0], tmp[1]), tmp[2])
+
     return True
 
 
