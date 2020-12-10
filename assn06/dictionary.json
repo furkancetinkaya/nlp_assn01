@@ -1,0 +1,47 @@
+[
+    {
+        "_word" : "kır",
+        "_pos" : "n",
+        "_senses" : [
+            {
+                "_gloss" : "Beyazla az miktarda siyah karışmasından oluşan renk",
+                "_example" : "Gözlerinden, kırları artan sakalına bir iki damla yaş düştü."
+            },
+            {
+                "_gloss" : "Şehir ve kasabaların dışında kalan, çoğu boş ve geniş yer, dağ bayır",
+                "_example" : "Araba tenha, düz yolda tıkır tıkır gidiyor, ara sıra kır kokuları getiren hafif bir rüzgâr esiyordu."
+            }
+        ],
+        "_best_sense" : 0
+    },
+    {
+        "_word": "kır",
+        "_pos": "v",
+        "_senses": [
+            {
+                "_gloss": "Sert şeyleri vurarak veya ezerek parçalamak",
+                "_example": "Kaşla göz arasında ellerine geçirdiklerini kırıp dökmeye koyulmuşlardı."
+            },
+            {
+                "_gloss": "Dileğini kabul etmeyerek veya beklenmeyen bir davranış karşısında bırakarak gücendirmek, incitmek",
+                "_example": "Sizin hatırınızı kırmamak için işte gelip misafir oluyorum; fakat bu yaşımda misafirle uğraşacak hâlim yok."
+            }
+        ],
+        "_best_sense": 0
+    },
+    {
+        "_word" : "saz",
+        "_pos" : "n",
+        "_senses" : [
+            {
+                "_gloss" : "Genellikle su kıyılarında, bataklık yerlerde yetişen ince, açık sarı renkli kamış, hasır otu, kiliz, kofa",
+                "_example" : "Köyün saz kaplı, karanlık çökmüş damlarına seslendi."
+            },
+            {
+                "_gloss" : "Türk halk müziğinde kullanılan, gövdesi ağaçtan oyularak yapılmış, telli, uzun saplı çalgı, bağlama",
+                "_example" : "İnce ve yüksek bir sanat eseri olan saz da milliyetimizin bir hususiyetidir."
+            }
+        ],
+        "_best_sense" : 0
+    }
+]

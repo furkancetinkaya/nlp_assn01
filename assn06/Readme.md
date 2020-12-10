@@ -1,0 +1,2 @@
+# Natural Language Processing Task 6
+A very simple example should be prepared to show how to do word sense disambiguation using the LESK algorithm on a Turkish corpus. Here, the student can be flexible about corpus and glossary, in other words, a corpus with a few sentences and a dictionary with a few definitions can be prepared.
