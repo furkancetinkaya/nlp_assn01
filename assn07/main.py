@@ -9,7 +9,7 @@ from nltk.corpus import stopwords
 
 stop_words = set(stopwords.words('turkish'))
 threshold = 5
-cutoff = 0.6
+cutoff = 0.8
 
 
 class Corpus:
@@ -72,11 +72,33 @@ def main():
         else:
             lf.append(elem[0][0])
 
+    print("Most frequent words:\n--------------------------")
+    for elem in freqs:
+        if elem[1] >= threshold:
+            hf.append(elem[0][0])
+            print("%13s " % elem[0][0], elem[1])
+
+    print("")
+    inp = input("Press any key to continue...")
+
+    print("Least frequent words:\n--------------------------")
+    for elem in freqs:
+        if elem[1] < threshold:
+            lf.append(elem[0][0])
+            print("%13s " % elem[0][0], elem[1])
+
+    print("")
+    inp = input("Press any key to continue...")
+
     print("%16s  " % "Low Frequency", "Most Similar Word")
     print("--------------------------------------")
     for elem in lf:
         res = difflib.get_close_matches(elem, hf, n=1, cutoff=cutoff)
-        print("%16s  " % elem, res)
+        if len(res) > 0:
+            sim = res[0]
+        else:
+            sim = "----"
+        print("%13s  " % elem, sim)
 
 
 os.system("clear")
