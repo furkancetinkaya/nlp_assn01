@@ -14,7 +14,6 @@ cutoff = 0.8
 
 class Corpus:
     _corpus = []
-    _docs = []
     tokens = []
 
     def __init__(self, low, high) -> None:
@@ -42,7 +41,6 @@ class Corpus:
                 lemma = lemmer.get_base.lower()
                 if lemma.isalnum() is True:
                     lemmatized.append(lemma)
-            self._docs.append(lemmatized)
             [self.tokens.append(lemma) for lemma in lemmatized]
 
 
@@ -64,27 +62,27 @@ def main():
     # Make UniGram Analysis to calculate frequencies
     freqs = get_frequencies(tokens)
     
-    lf = []
-    hf = []
+    less_frequent = []
+    more_frequent = []
     for elem in freqs:
         if elem[1] >= threshold:
-            hf.append(elem[0][0])
+            more_frequent.append(elem[0][0])
         else:
-            lf.append(elem[0][0])
+            less_frequent.append(elem[0][0])
 
-    print("Most frequent words:\n--------------------------")
+    print("More frequent words:\n--------------------------")
     for elem in freqs:
         if elem[1] >= threshold:
-            hf.append(elem[0][0])
+            more_frequent.append(elem[0][0])
             print("%13s " % elem[0][0], elem[1])
 
     print("")
     inp = input("Press any key to continue...")
 
-    print("Least frequent words:\n--------------------------")
+    print("Less frequent words:\n--------------------------")
     for elem in freqs:
         if elem[1] < threshold:
-            lf.append(elem[0][0])
+            less_frequent.append(elem[0][0])
             print("%13s " % elem[0][0], elem[1])
 
     print("")
@@ -92,8 +90,8 @@ def main():
 
     print("%16s  " % "Low Frequency", "Most Similar Word")
     print("--------------------------------------")
-    for elem in lf:
-        res = difflib.get_close_matches(elem, hf, n=1, cutoff=cutoff)
+    for elem in less_frequent:
+        res = difflib.get_close_matches(elem, more_frequent, n=1, cutoff=cutoff)
         if len(res) > 0:
             sim = res[0]
         else:
