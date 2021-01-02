@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assignment-9 </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    
+
+    <body style="background-color: #bbbbbb; text-align: center; scroll-behavior: auto;">
+        <h1 style="background-color: brown; color: black;"><b><u>Natural Language Processing Task 9</u></b></h1>
+    
+        <div style="margin-left: 10%; margin-right: 10%;">
+            </br>
+            <p style="color: black;">
+                <b>
+                    Student should prepare a question answering system (accepts sentences in English) for a Frequntly Asked Questions (FAQ) web page. I prefer you to use a BERT based model such as in <a href="https://keras.io/examples/nlp/semantic_similarity_with_bert/">this page</a>. The student should find a FAQ dataset from any web page. Then this dataset must be implied to the found model, and last, using Flask or any other, the student should execute the py code as a web page.
+                </b>
+            </p>
+
+            <div style="margin-left: 5%; margin-right: 5%;">
+                <h3 style="color: red;">Similar Question</h3>
+                <p>{{sim_ques}}</p>
+                <h3 style="color: red;">Answer</h3>
+                <p>{{answer}}</p>
+            </div>
+            <button onclick="goBack()">Go Back</button>
+
+            <script>
+            function goBack() {
+              window.history.back();
+            }
+            </script> 
+        </div>
+
+    </body>
+</html>

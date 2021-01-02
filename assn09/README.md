@@ -1,0 +1,3 @@
+# Natural Language Processing Task 9
+
+Student should prepare a question answering system (accepts sentences in English) for a Frequntly Asked Questions (FAQ) web page. I prefer you to use a BERT based model such as in this page: https://keras.io/examples/nlp/semantic_similarity_with_bert/. The student should find a FAQ dataset from any web page. Then this dataset must be implied to the found model, and last, using Flask or any other, the student should execute the py code as a web page.
